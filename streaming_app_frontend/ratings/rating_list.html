@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Ratings{% endblock %}
+{% block content %}
+<h2 class="text-center">Ratings</h2>
+<div class="ratings">
+    {% for rating in ratings %}
+        <div class="rating mb-3">
+            <p><strong>{{ rating.user.username }}</strong> rated:</p>
+            <p>{{ rating.value }} stars</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

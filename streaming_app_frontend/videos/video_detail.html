@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}{{ video.title }}{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <h2 class="text-center">{{ video.title }}</h2>
+        <video class="w-100 mb-3" controls>
+            <source src="{{ video.file.url }}" type="video/mp4">
+        </video>
+        <p>{{ video.description }}</p>
+        <h4>Comments</h4>
+        <div class="comments">
+            {% for comment in video.comments.all %}
+                <div class="comment mb-2">
+                    <p><strong>{{ comment.user.username }}</strong> said:</p>
+                    <p>{{ comment.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <form method="post">
+            {% csrf_token %}
+            {{ comment_form.as_p }}
+            <button type="submit" class="btn btn-primary">Add Comment</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

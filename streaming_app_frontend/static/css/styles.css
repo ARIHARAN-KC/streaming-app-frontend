@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+header {
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('{% static "images/hero-bg.jpg" %}') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #666;
+}
+
+/* Forms */
+form {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form .btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+form .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Search Bar */
+.search-bar {
+    margin: 30px 0;
+}
+
+.search-bar input {
+    border-radius: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+/* Error Pages */
+.text-center {
+    margin-top: 50px;
+}
+
+.text-center h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-center p {
+    font-size: 18px;
+    color: #666;
+}
+
+/* Admin Dashboard */
+.list-group-item {
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    .hero {
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+}

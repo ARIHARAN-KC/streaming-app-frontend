@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Comments{% endblock %}
+{% block content %}
+<h2 class="text-center">Comments</h2>
+<div class="comments">
+    {% for comment in comments %}
+        <div class="comment mb-3">
+            <p><strong>{{ comment.user.username }}</strong> said:</p>
+            <p>{{ comment.text }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

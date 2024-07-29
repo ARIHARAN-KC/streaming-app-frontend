@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Videos{% endblock %}
+{% block content %}
+<h2 class="text-center">Videos</h2>
+<div class="row">
+    {% for video in videos %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <video class="card-img-top" controls>
+                    <source src="{{ video.file.url }}" type="video/mp4">
+                </video>
+                <div class="card-body">
+                    <h5 class="card-title">{{ video.title }}</h5>
+                    <p class="card-text">{{ video.description|truncatewords:20 }}</p>
+                    <a href="{% url 'video_detail' video.id %}" class="btn btn-primary">Watch</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+    
